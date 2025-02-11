@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>News India</title>
+    <script>
+me
+        function displayTime() {
+            let currentTime = new Date();
+            document.getElementById("current-time").innerHTML = currentTime.toLocaleString(); 
+        }
+
+
+        function changeHeadline() {
+            let newsHeadlines = [
+                "Govt Announces Major Economic Reform!",
+                "Cricket: India Clinches Victory Against Australia!",
+                "Bollywood: Exciting New Films Released This Week!",
+                "Tech Update: India Takes a Leap in AI Innovation!"
+            ];
+
+            let randomNum = Math.floor(Math.random() * newsHeadlines.length);
+            document.getElementById("headline").innerHTML = newsHeadlines[randomNum];
+        }
+
+
+        window.onload = function() {
+            alert("Welcome to News India! Stay informed with the latest updates.");
+            displayTime();  
+        };
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+
+    <header style="background-color: #d32f2f; color: white; padding: 15px; text-align: center;">
+        <h1>News India</h1>
+        <p>Your Reliable Source for Indian News</p>
+        <p><strong>Date & Time:</strong> <span id="current-time"></span></p>
+    </header>
+
+
+    <nav style="background-color: #333; padding: 10px; text-align: center;">
+        <a href="index.html" style="color: white; margin: 10px; text-decoration: none;">Home</a>
+        <a href="politics.html" style="color: white; margin: 10px; text-decoration: none;">Politics</a>
+        <a href="sports.html" style="color: white; margin: 10px; text-decoration: none;">Sports</a>
+        <a href="entertainment.html" style="color: white; margin: 10px; text-decoration: none;">Entertainment</a>
+        <a href="contact.html" style="color: white; margin: 10px; text-decoration: none;">Contact</a>
+    </nav>
+
+
+    <section style="padding: 20px;">
+        <article>
+            <h2 id="headline">Breaking News: Elections 2025 - What to Expect?</h2>
+            <button onclick="changeHeadline()">Update News</button>
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202502/delhi-elections-2025-011534721-16x9_0.png?VersionId=yQnrlKM0oNsX.pjNBVs1W6t2EW7U_Ui6&size=690:388" 
+                alt="Election News" width="320" height="200">
+            <p>Latest election updates, key candidates, and voter trends shaping the 2025 elections.</p>
+            <a href="election-news.html">Read More</a>
+        </article>
+
+        <article>
+            <h2>Cricket: India Secures T20 Series Win</h2>
+            <img src="https://c.ndtvimg.com/2025-01/ojovq018_india-england-bcci_625x300_25_January_25.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=400" 
+                alt="Cricket Match" width="100%" height="200px">
+            <p>Team India dominated England in the T20 series at home, winning with a decisive 4-1 margin.</p>
+            <a href="sports.html">Read More</a>
+        </article>
+
+        <article>
+            <h2>Bollywood: This Week’s Must-Watch Films</h2>
+            <img src="https://www.siasat.com/wp-content/uploads/2024/11/Bollywood.jpg" 
+                alt="Bollywood Movies" width="100%" height="300px">
+            <p>Discover the latest Bollywood blockbusters releasing in theatres this week!</p>
+            <a href="entertainment.html">Read More</a>
+        </article>
+    </section>
+
+
+    <footer style="background-color: #d32f2f; color: white; text-align: center; padding: 10px;">
+        <p>&copy; 2025 News India. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
